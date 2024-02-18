@@ -1,10 +1,23 @@
 import React from "react";
+import axios from "axios";
+import { error } from "console";
 
-const SignUp = () => {
+const SignUp = async () => {
+  const handelsubmit = () => {
+    const URL = "";
+    return axios
+      .get(URL)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
-    <div className="text-black flex  bg-slate-500 w-full">
-      <div className="flex justify-center">
-        <form>
+    <div className="text-black flex w-full  bg-slate-500">
+      <div className="flex justify-center m-auto">
+        <form onSubmit={handelsubmit}>
           <div>
             <label htmlFor="">Username</label>
             <input type="text" />
@@ -17,6 +30,7 @@ const SignUp = () => {
             <label htmlFor="">Password</label>
             <input type="password" />
           </div>
+          <button>submit</button>
         </form>
       </div>
     </div>
