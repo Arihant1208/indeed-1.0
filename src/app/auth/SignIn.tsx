@@ -1,4 +1,4 @@
-export default function signin() {
+export default function SignIn() {
   return (
     <>
       <div>kshdfbkjv</div>
