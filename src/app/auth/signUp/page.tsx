@@ -1,10 +1,13 @@
+"use client"
 import React from "react";
 import axios from "axios";
-import { error } from "console";
 
 const SignUp = async () => {
-  const handelsubmit = () => {
-    const URL = "";
+  const handelsubmit = (event:any) => {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    console.log("hey")
+    const URL = "http://localhost:3000/api/auth";
     return axios
       .get(URL)
       .then((res) => {
@@ -30,7 +33,7 @@ const SignUp = async () => {
             <label htmlFor="">Password</label>
             <input type="password" />
           </div>
-          <button>submit</button>
+          <button type="submit">submit</button>
         </form>
       </div>
     </div>
