@@ -5,7 +5,7 @@ export default function Home() {
   const signup = () => {};
   return (
     <>
-      <Link href="/auth/SignUp">SignUp</Link>
+      <Link href="/auth/signUp">SignUp</Link>
     </>
   );
 }
